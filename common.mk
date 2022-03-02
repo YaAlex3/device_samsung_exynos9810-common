@@ -129,7 +129,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/fstab.exynos9810:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9810 \
     $(COMMON_PATH)/configs/init/fstab.exynos9810:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9810 \
     $(COMMON_PATH)/configs/init/init.exynos9810.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9810.rc \
-    $(COMMON_PATH)/configs/init/init.exynos9810.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9810.usb.rc \
+    $(COMMON_PATH)/configs/init/init.samsungexynos9810.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsungexynos9810.usb.rc \
     $(COMMON_PATH)/configs/init/init.recovery.exynos9810.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos9810.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
