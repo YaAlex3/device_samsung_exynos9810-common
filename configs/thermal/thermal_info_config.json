@@ -16,21 +16,6 @@
             "Multiplier": 0.001
         },
         {
-            "Name": "MID",
-            "Type": "CPU",
-            "HotThreshold": [
-                "NAN",
-                "NAN",
-                "NAN",
-                96.0,
-                "NAN",
-                "NAN",
-                115.0
-            ],
-            "VrThreshold": "NAN",
-            "Multiplier": 0.001
-        },
-        {
             "Name": "LITTLE",
             "Type": "CPU",
             "HotThreshold": [
@@ -123,10 +108,6 @@
         },
         {
             "Name": "thermal-cpufreq-1",
-            "Type": "CPU"
-        },
-        {
-            "Name": "thermal-cpufreq-2",
             "Type": "CPU"
         },
         {
