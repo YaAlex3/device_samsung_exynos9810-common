@@ -23,36 +23,7 @@
 #include <cutils/properties.h>
 #include <string.h>
 
-static inline const char* getBTDefaultName()
-{
-    char device[PROPERTY_VALUE_MAX];
-    property_get("ro.product.device", device, "");
-
-    if (!strcmp("beyond0lte", device))
-        return "Galaxy S10e";
-
-    if (!strcmp("beyond1lte", device))
-        return "Galaxy S10";
-
-    if (!strcmp("beyond2lte", device))
-        return "Galaxy S10+";
-
-    if (!strcmp("beyondx", device))
-        return "Galaxy S10 5G";
-
-    if (!strcmp("d1", device))
-        return "Galaxy Note10";
-
-    if (!strcmp("d2s", device))
-        return "Galaxy Note10+";
-
-    if (!strcmp("d2x", device))
-        return "Galaxy Note10+ 5G";
-
-    return "";
-}
-
-#define BTM_DEF_LOCAL_NAME getBTDefaultName()
+#define BTM_DEF_LOCAL_NAME "Galaxy Note10 Lite"
 #endif /* OS_GENERIC */
 
 /*
