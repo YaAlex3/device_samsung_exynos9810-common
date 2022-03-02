@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/exynos9820-common
+COMMON_PATH := device/samsung/exynos9810-common
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/exynos9820-common/exynos9820-common-vendor.mk)
+$(call inherit-product, vendor/samsung/exynos9810-common/exynos9810-common-vendor.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -58,7 +58,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64.exynos9820 \
+    android.hardware.camera.provider@2.5-service_64.exynos9810 \
     libsensorndkbridge \
     Snap
 
@@ -126,21 +126,12 @@ PRODUCT_PACKAGES += \
 
 # init
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9820 \
-    $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9825 \
-    $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9820 \
-    $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9825 \
-    $(COMMON_PATH)/configs/init/init.exynos9820.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9820.rc \
-    $(COMMON_PATH)/configs/init/init.exynos9820.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9820.usb.rc \
-    $(COMMON_PATH)/configs/init/init.recovery.exynos9820.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos9820.rc \
-    $(COMMON_PATH)/configs/init/init.recovery.exynos9820.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos9825.rc \
-    $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsung.rc \
+    $(COMMON_PATH)/configs/init/fstab.exynos9810:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9810 \
+    $(COMMON_PATH)/configs/init/fstab.exynos9810:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9810 \
+    $(COMMON_PATH)/configs/init/init.exynos9810.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9810.rc \
+    $(COMMON_PATH)/configs/init/init.exynos9810.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9810.usb.rc \
+    $(COMMON_PATH)/configs/init/init.recovery.exynos9810.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos9810.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
-
-ifeq ($(TARGET_HAVE_FOD),true)
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/init.udfps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.udfps.rc
-endif
 
 # Keylayout
 PRODUCT_COPY_FILES += \

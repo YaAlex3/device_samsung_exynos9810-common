@@ -13,27 +13,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-COMMON_PATH := device/samsung/exynos9820-common
+COMMON_PATH := device/samsung/exynos9810-common
 
 ## Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 ## Inherit proprietary vendor configuration
-include vendor/samsung/exynos9820-common/BoardConfigVendor.mk
+include vendor/samsung/exynos9810-common/BoardConfigVendor.mk
 
 ## Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-2a
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := cortex-a75
+TARGET_CPU_VARIANT := cortex-a53
 
-## Architecture (Secondary)
+## Architecture (secondary)
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a55
+TARGET_2ND_CPU_VARIANT := cortex-a53
 
 ## Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
@@ -73,7 +73,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos9820
+TARGET_KERNEL_SOURCE := kernel/samsung/exynos9810
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
@@ -97,15 +97,9 @@ BOARD_ROOT_EXTRA_FOLDERS := efs
 
 ## Platform
 BOARD_VENDOR := samsung
-ifneq ($(filter beyond0lte beyond1lte beyond2lte beyondx,$(TARGET_DEVICE)),)
-TARGET_BOARD_PLATFORM := universal9820
-TARGET_BOOTLOADER_BOARD_NAME := exynos9820
-else
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/exynos9825_manifest.xml
-TARGET_BOARD_PLATFORM := universal9825
-TARGET_BOOTLOADER_BOARD_NAME := exynos9825
-endif
-TARGET_SOC := exynos9820
+TARGET_BOARD_PLATFORM := universal9810
+TARGET_BOOTLOADER_BOARD_NAME := exynos9810
+TARGET_SOC := exynos9810
 
 ## Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
@@ -113,11 +107,11 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 ## Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.exynos9820
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.exynos9810
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 
 ## Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_exynos9820
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_exynos9810
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
 ## RIL
@@ -127,7 +121,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 VENDOR_SECURITY_PATCH := 2022-02-01
 
 ## SELinux
-BOARD_SEPOLICY_TEE_FLAVOR := teegris
+BOARD_SEPOLICY_TEE_FLAVOR := mobicore
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
