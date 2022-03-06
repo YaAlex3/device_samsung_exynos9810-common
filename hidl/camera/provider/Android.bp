@@ -15,27 +15,27 @@
 
 
 soong_config_module_type {
-    name: "exynos9820_model",
+    name: "exynos9810_model",
     module_type: "cc_defaults",
-    config_namespace: "exynos9820CameraVars",
-    value_variables: ["exynos9820_model"],
+    config_namespace: "exynos9810CameraVars",
+    value_variables: ["exynos9810_model"],
     properties: ["cppflags"],
 }
 
-exynos9820_model {
-    name: "exynos9820_model_defaults",
+exynos9810_model {
+    name: "exynos9810_model_defaults",
     soong_config_variables: {
-        exynos9820_model: {
-            cppflags: ["-DEXYNOS9820_MODEL_%s"],
+        exynos9810_model: {
+            cppflags: ["-DEXYNOS9810_MODEL_%s"],
         },
     },
 }
 
 cc_binary {
-    name: "android.hardware.camera.provider@2.5-service_64.exynos9820",
+    name: "android.hardware.camera.provider@2.5-service_64.exynos9810",
     defaults: [
         "hidl_defaults",
-        "exynos9820_model_defaults",
+        "exynos9810_model_defaults",
     ],
     compile_multilib: "64",
     proprietary: true,
@@ -44,7 +44,7 @@ cc_binary {
         "SamsungCameraProvider.cpp",
         "service.cpp"
     ],
-    init_rc: ["android.hardware.camera.provider@2.5-service_64.exynos9820.rc"],
+    init_rc: ["android.hardware.camera.provider@2.5-service_64.exynos9810.rc"],
     shared_libs: [
         "android.hardware.camera.provider@2.4",
         "android.hardware.camera.provider@2.4-legacy",

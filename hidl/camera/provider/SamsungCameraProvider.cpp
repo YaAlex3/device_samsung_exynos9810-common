@@ -26,10 +26,8 @@ using ::android::OK;
 const int kMaxCameraIdLen = 16;
 
 SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() {
-#ifndef EXYNOS9820_MODEL_beyond0lte
     // ID=52 is telephoto
     mExtraIDs.push_back(52);
-#endif
 
     if (!mInitFailed) {
         for (int i : mExtraIDs) {
