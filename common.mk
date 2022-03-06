@@ -26,7 +26,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl:32 \
     android.hardware.soundtrigger@2.0-impl:32 \
-    android.hidl.allocator@1.0.vendor:32 \
+    android.hidl.allocator@1.0.vendor \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
@@ -149,6 +149,7 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4support.vendor:64 \
     libkeymaster4_1support.vendor:64
 
 # Lights
