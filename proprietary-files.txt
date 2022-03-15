@@ -132,6 +132,10 @@ vendor/etc/init/mobicore.rc
 system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/nfc/libnfc-nxp_RF.conf
+-vendor/bin/hw/nxp.android.hardware.nfc@1.1-service
+vendor/etc/init/nxp.android.hardware.nfc@1.1-service.rc
+-vendor/lib64/nfc_nci_nxp.so
+-vendor/lib64/vendor.nxp.nxpnfc@1.1.so
 
 ## OMX
 -vendor/lib/libExynosOMX_Core.so

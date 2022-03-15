@@ -1,7 +1,7 @@
 ## Data Files
 /data/vendor/display(/.*)?                   u:object_r:display_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
-/data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
+/data/vendor/nfc(/.*)?                       u:object_r:vendor_nfc_vendor_data_file:s0
 
 ## Devices
 /dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
@@ -22,7 +22,7 @@
 /dev/g2d                                     u:object_r:graphics_device:s0
 
 # NFC
-/dev/sec-nfc                                 u:object_r:nfc_device:s0
+/dev/pn547                                   u:object_r:nfc_device:s0
 
 # RIL
 /dev/modem_boot_spi                          u:object_r:vendor_radio_device:s0
@@ -77,5 +77,5 @@
 
 ## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
-
-/(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@[0-9]\.[0-9]-service_64.exynos9820  u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/bin/hw/nxp\.android\.hardware\.nfc@1\.1-service                              u:object_r:hal_nfc_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@[0-9]\.[0-9]-service_64.exynos9810  u:object_r:hal_camera_default_exec:s0
