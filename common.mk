@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung
+    android.hardware.biometrics.fingerprint@2.1.vendor:64
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
