@@ -48,33 +48,11 @@
             ],
             "ResetOnInit": true
         },
-        {
-            "Name": "GPUMaxFreq",
-            "Path": "/sys/kernel/gpu/gpu_max_clock",
-            "Values": [
-                "572000",
-                "546000",
-                "455000"
-            ],
-            "DefaultIndex": 0,
-            "ResetOnInit": true
-        },
-        {
-            "Name": "GPUMinFreq",
-            "Path": "/sys/kernel/gpu/gpu_min_clock",
-            "Values": [
-                "455000",
-                "338000",
-                "299000",
-                "260000"
-            ],
-            "ResetOnInit": true
-        },
-		{
+	{
             "Name": "TASchedtuneBoost",
             "Path": "/dev/stune/top-app/schedtune.boost",
             "Values": [
-                "70",
+		"10",
                 "5"
             ],
             "ResetOnInit": true
@@ -87,6 +65,16 @@
                 "100"
             ],
             "HoldFd": true
+        },
+        {
+            "Name": "DoubleTapToWakeEnable",
+            "Path": "/sys/class/sec/tsp/cmd",
+            "Values": [
+                "aot_enable,0",
+                "aot_enable,1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": false
         },
         {
             "Name": "PowerHALMainState",
@@ -147,7 +135,7 @@
             "PowerHint": "INTERACTION",
             "Node": "TASchedtuneBoost",
             "Duration": 0,
-            "Value": "70"
+            "Value": "10"
         },
         {
             "PowerHint": "LAUNCH",
@@ -282,12 +270,6 @@
             "Value": "1794000"
         },
         {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "GPUMaxFreq",
-            "Duration": 0,
-            "Value": "455000"
-        },
-        {
             "PowerHint": "VR_MODE",
             "Node": "PowerHALMainState",
             "Duration": 0,
@@ -304,18 +286,6 @@
             "Node": "PowerHALRenderingState",
             "Duration": 0,
             "Value": "EXPENSIVE_RENDERING"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMinFreq",
-            "Duration": 0,
-            "Value": "455000"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMaxFreq",
-            "Duration": 0,
-            "Value": "572000"
         },
         {
             "PowerHint": "PROFILE_POWER_SAVE",
