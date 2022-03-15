@@ -8,7 +8,7 @@ vendor	/vendor	ext4	ro,barrier=1	wait,avb,logical,first_stage_mount
 product	/product	ext4	ro,errors=panic	wait,avb,logical,first_stage_mount
 odm	/odm	ext4	ro,errors=panic	wait,avb,logical,first_stage_mount
 
-/dev/block/bootdevice/by-name/boot                      /boot                  emmc    defaults                                             defaults
+/dev/block/by-name/boot                      /boot                  emmc    defaults                                             defaults
 
 #/dev/block/by-name/prism	/prism	ext4	ro,barrier=1	nofail,avb,first_stage_mount
 #/dev/block/by-name/optics	/optics	ext4	ro,barrier=1	nofail,avb,first_stage_mount
