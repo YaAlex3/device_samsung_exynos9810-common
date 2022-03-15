@@ -29,6 +29,9 @@ genfscon sysfs /devices/platform/15d60000.hsi2c/i2c-17/17-0066/max77705-fuelgaug
 genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-15/15-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-18/18-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/sec-direct-charger/power_supply/sec-direct-charger/type                                u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/14360000.hsi2c/i2c-17/17-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter/type      u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/14370000.hsi2c/i2c-18/18-003b/power_supply/s2mu106-fuelgauge/type                      u:object_r:sysfs_battery:s0
+genfscon sysfs /sys/devices/platform/14370000.hsi2c/i2c-18/18-003c/power_supply/s2mu106-usbpd/type                      u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/188d0000.mfc/video4linux/video6/name                                                   u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/188d0000.mfc/video4linux/video7/name                                                   u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/188d0000.mfc/video4linux/video8/name                                                   u:object_r:sysfs_v4l:s0
