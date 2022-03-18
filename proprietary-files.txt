@@ -57,13 +57,6 @@ vendor/etc/media_profiles_V1_0.xml
 -vendor/lib64/libgf_in_system_lib.so
 -vendor/lib64/libqfp_sensortest.so
 -vendor/lib64/libsynaFpSensorTestNwd.so
--vendor/lib64/hw/fingerprint.default.so
--vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
-vendor/etc/init/init.fingerprint.rc
-vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
-vendor/etc/init/fingerprint_common.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.xml
--vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
 
 ## GPS
 vendor/bin/hw/gps.sh
