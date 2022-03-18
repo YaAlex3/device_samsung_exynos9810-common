@@ -66,11 +66,11 @@
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
 
 # Sensors
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)                  u:object_r:sysfs_iio:s0
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/poll_delay       u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/buffer/enable    u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/buffer/length    u:object_r:sysfs_sensors_writable:s0
-/sys/devices/platform/15c40000.adc(/.*)                                           u:object_r:sysfs_iio:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)                  u:object_r:sysfs_iio:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)/poll_delay       u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)/buffer/enable    u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/13ac0000.spi/spi_master/spi20/spi20.0(/.*)/buffer/length    u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/14230000.adc(/.*)                                           u:object_r:sysfs_iio:s0
 /sys/devices/virtual/input/input[0-9]/enable                                      u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/input/input[0-9]/poll_delay                                  u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/sec/hall_ic(/.*)                                             u:object_r:sysfs_sec_key:s0
