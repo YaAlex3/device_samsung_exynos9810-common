@@ -36,6 +36,8 @@ genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/mdnie/accessibility  
 genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/mdnie/lux                                                    u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/mdnie/mode                                                   u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/mdnie/sensorRGB                                              u:object_r:sysfs_lcd_writable:s0
+genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/fp_green_circle                                              u:object_r:sysfs_lcd_writable:s0
+genfscon sysfs /devices/platform/panel/panel_drv/lcd/panel/hbm_override                                                 u:object_r:sysfs_lcd_writable:s0
 genfscon sysfs /devices/system/chip-id/revision                                                                         u:object_r:sysfs_chipid:s0
 genfscon sysfs /devices/virtual/sensors/hrm_sensor/led_current                                                          u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sensors/hrm_sensor/xtalk_code                                                           u:object_r:sysfs_sensors_writable:s0
