@@ -151,7 +151,7 @@ VENDOR_SECURITY_PATCH := 2022-02-01
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
-include device/lineage/sepolicy/exynos/sepolicy.mk
+include device/custom/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
