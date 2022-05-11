@@ -1,0 +1,6 @@
+[twelve 426d0d2] los-
+ 7 files changed, 1 insertion(+), 90 deletions(-)
+ delete mode 100644 lineage.dependencies
+ delete mode 100644 overlay/lineage-sdk/lineage/res/res/values/config.xml
+ delete mode 100644 overlay/lineage-sdk/packages/LineageSettingsProvider/res/values/defaults.xml
+ delete mode 100644 sepolicy/vendor/hal_lineage_powershare_default.te

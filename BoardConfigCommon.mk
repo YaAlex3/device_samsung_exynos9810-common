@@ -37,7 +37,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 ## Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
-BOARD_HAVE_BLUETOOTH_BCM := true
 
 ## Boot Image
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -150,7 +149,7 @@ VENDOR_SECURITY_PATCH := 2022-02-01
 
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := mobicore
-include device/custom/sepolicy/exynos/sepolicy.mk
+include device/awaken/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
