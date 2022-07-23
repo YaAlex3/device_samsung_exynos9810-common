@@ -1,0 +1,2 @@
+r_dir_file(hal_graphics_allocator_default, debugfs_ion);
+r_dir_file(hal_graphics_allocator_default, debugfs_ion_dma);

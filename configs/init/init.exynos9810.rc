@@ -849,6 +849,14 @@ on boot
 on late-fs
     wait_for_prop hwservicemanager.ready true
     mount_all /vendor/etc/fstab.exynos9810 --late
+    swapon_all /vendor/etc/fstab.exynos9810
+
+on late-init
+    # Start services early for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-4
+    start vendor.gralloc-2-0
 
 on fs
     mount_all /vendor/etc/fstab.exynos9810 --early
